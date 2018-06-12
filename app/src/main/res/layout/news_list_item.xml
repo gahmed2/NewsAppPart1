@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_item_list"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <!--0dp means match_constraint, so that the view sticks to its given margin-->
+    <!--Text inside "tools:text" attr. will not appear in runtime app, it's for development-->
+    <ImageView
+        android:id="@+id/newsImage"
+        android:layout_width="@dimen/zero_width"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/width_12"
+        android:layout_marginStart="@dimen/width_12"
+        android:layout_marginTop="@dimen/width_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/alert_light_frame" />
+
+    <!--Progress bar will be shown during loading the image from the server and will disappear a
+    after loading it successfully-->
+    <ProgressBar
+        android:id="@+id/imageProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="47dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="@dimen/width_8"
+        android:layout_marginEnd="@dimen/width_8"
+        android:layout_marginStart="@dimen/width_8"
+        android:layout_marginTop="@dimen/width_8"
+        android:elevation="@dimen/progress_bar_elevation"
+        android:indeterminateTint="@color/loading_indicator_color"
+        app:layout_constraintBottom_toBottomOf="@+id/newsImage"
+        app:layout_constraintEnd_toEndOf="@+id/newsImage"
+        app:layout_constraintStart_toStartOf="@+id/newsImage"
+        app:layout_constraintTop_toTopOf="@+id/newsImage" />
+
+    <!--Title-->
+    <TextView
+        android:id="@+id/newsTitle"
+        android:layout_width="@dimen/zero_width"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/width_12"
+        android:layout_marginStart="@dimen/width_12"
+        android:layout_marginTop="@dimen/width_12"
+        android:textSize="@dimen/title_font"
+        android:textStyle="bold"
+        android:textColor="@color/default_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newsImage"
+        tools:text="Title" />
+
+    <!--Author-->
+    <TextView
+        android:id="@+id/newsAuthor"
+        android:layout_width="@dimen/zero_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/width_8"
+        android:layout_marginStart="@dimen/width_12"
+        android:layout_marginTop="@dimen/width_6"
+        android:textSize="@dimen/author_font"
+        android:textStyle="italic"
+        android:textColor="@color/default_black"
+        app:layout_constraintBottom_toTopOf="@+id/newsContent"
+        app:layout_constraintEnd_toStartOf="@+id/newsDate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newsTitle"
+        tools:text="Author" />
+
+    <!--Date-->
+    <TextView
+        android:id="@+id/newsDate"
+        android:layout_width="@dimen/zero_width"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/width_12"
+        android:layout_marginStart="@dimen/width_12"
+        android:layout_marginTop="@dimen/width_6"
+        android:textSize="@dimen/date_font"
+        android:textColor="@color/default_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/newsAuthor"
+        app:layout_constraintTop_toBottomOf="@+id/newsTitle"
+        tools:text="Date" />
+
+    <!--Content-->
+    <TextView
+        android:id="@+id/newsContent"
+        android:layout_width="@dimen/zero_width"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/width_12"
+        android:layout_marginStart="@dimen/width_12"
+        android:layout_marginTop="@dimen/width_8"
+        android:textSize="@dimen/content_font"
+        android:textColor="@color/default_black"
+        app:layout_constraintEnd_toStartOf="@+id/gotoWebArrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newsDate"
+        tools:text="Content" />
+
+    <ImageView
+        android:id="@+id/gotoWebArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/width_12"
+        android:layout_marginEnd="@dimen/width_12"
+        android:layout_marginTop="@dimen/width_12"
+        android:background="@color/arrow_background"
+        app:layout_constraintBottom_toTopOf="@+id/newsSection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newsDate"
+        app:srcCompat="@drawable/goto_web_arrow" />
+
+    <!--Section-->
+    <TextView
+        android:id="@+id/newsSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/width_8"
+        android:layout_marginStart="@dimen/width_12"
+        android:layout_marginTop="@dimen/width_6"
+        android:background="@drawable/rounded_corners"
+        android:padding="@dimen/section2_padding"
+        android:textColor="@color/section_text_color"
+        android:textSize="@dimen/section_font"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newsContent"
+        tools:text="Section" />
+
+</android.support.constraint.ConstraintLayout>

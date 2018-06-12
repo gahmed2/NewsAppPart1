@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="section_radius">8dp</dimen>
+    <dimen name="section_padding">8dp</dimen>
+    <dimen name="section2_padding">5dp</dimen>
+
+    <dimen name="zero_width">0dp</dimen>
+    <dimen name="width_12">12dp</dimen>
+    <dimen name="width_8">8dp</dimen>
+    <dimen name="width_6">6dp</dimen>
+
+    <dimen name="title_font">20sp</dimen>
+    <dimen name="author_font">14sp</dimen>
+    <dimen name="date_font">14sp</dimen>
+    <dimen name="content_font">18sp</dimen>
+    <dimen name="section_font">14sp</dimen>
+
+    <dimen name="progress_bar_elevation">2dp</dimen>
+
+</resources>

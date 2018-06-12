@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="background_color">#e8eaf6</color>
+    <color name="loading_indicator_color">#3F51B5</color>
+    <color name="arrow_background">#f44336</color>
+    <color name="section_text_color">#fafafa</color>
+    <color name="section_background_color">#f44336</color>
+    <color name="default_black">#000000</color>
+    <color name="emptyView_color">#f44336</color>
+</resources>
